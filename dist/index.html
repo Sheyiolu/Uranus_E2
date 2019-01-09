@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Uranus Exercise Two</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo logo-primary">
+        <a href="#">
+          <img src="images/logo.png" alt="company logo">
+        </a>
+      </div>
+      <div class="menu pull-right">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">IPHONES</a></li>
+          <li><a href="#">TABLET</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <section class="section1 row">
+        <div class="item-1-left col-1-2">
+          <h1>Get Moshood that timeless gift!</h1>
+          <p>
+            Purchase timeless gifts for your loved ones from the christmas store. We make sure they remember both the
+            gift and moments we create for as long as possible.
+          </p>
+          <a href="#section3"><button>See more</button></a>
+        </div>
+        <div>
+          <img src="images/1-watch.gif" alt="wristwatch" />
+        </div>
+      </section>
+      <section class=" section2 row">
+        <div class="item-2-left">
+          <img src="images/2-iphone-list.png" alt="iphone" />
+        </div>
+        <div class="item-2-right">
+          <h1>Be somebody's santa this season. Make one or all their wishes come true<span class="glyphicon glyphicon-map-marker"></span>.
+            It takes a second to make
+            memories, it takes a lifetime to forget them.</h1>
+          <a href="#section3"><button>Write us</button></a>
+        </div>
+      </section>
+      <section class="section3 row" id="section3">
+        <div class="item-3-left">
+          <div class="form">
+            <h1>Please write us and lets know what your heart desires are </h1>
+            <input type="email" placeholder="Email" />
+            <textarea placeholder="tell us what you want.."></textarea>
+            <button onclick="sendform()">Send</button>
+          </div>
+          <h2 class="nodisplay" id="feedback">Thank you so much! we've received your message. We'll reach out to you as
+            soon as possible</h2>
+        </div>
+        <div class="item-3-right">
+          <img src="images/3-ipad.png" alt="ipad" />
+        </div>
+      </section>
+    </div>
+    <script>
+      var form = document.querySelector('.form');
+      var feedback = document.getElementById('feedback');
+
+      function sendform() {
+        form.style.display = 'none';
+        feedback.classList.remove('nodisplay')
+      }
+    </script>
+  </main>
+</body>
+
+</html>

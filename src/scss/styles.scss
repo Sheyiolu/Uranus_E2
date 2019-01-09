@@ -1,0 +1,333 @@
+// ********Reset Styles*********
+@import url('normalize.css');
+
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700i|Source+Sans+Pro:300");
+
+// Set all elements on the page to use border-box
+html {
+    box-sizing: border-box;
+    background: #444 !important;
+    margin: 0em;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// *********Base styles**********
+body {
+    color: #ffffff !important;
+    margin: 0;
+    padding: 0;
+
+    font: {
+        family: 'Source Sans Pro';
+        weight: normal;
+    }
+}
+
+h1 {
+    font: {
+        family: 'Playfair Display', sans-serif;
+        size: 3rem;
+        weight: bold;
+        style: normal;
+    }
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu {
+    &>li {
+        list-style: none;
+    }
+
+    & a:hover {
+        text-decoration: line-through;
+    }
+}
+
+
+// *********Layout styles***********
+.container {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.row {
+    padding-left: 0;
+    padding-right: 0;
+
+    &::after {
+        content: "";
+        display: "table";
+        clear: "both";
+    }
+}
+
+.col-1-2 {
+    width: 25vw;
+}
+
+
+
+//*******Modulesstyles*********
+//******NAV*******
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul {
+    display: flex;
+    align-content: flex-end;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    padding: 0 1.5em;
+    margin: 0 1em;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro';
+    letter-spacing: 0.1em;
+    color: white;
+}
+
+.logo img {
+    height: 2rem;
+}
+
+// *****Section1******
+.section1 {
+    display: inline-flex;
+    margin: 4vh 0;
+}
+
+.item-1-left {
+    font-size: 1.6rem;
+    display: flex;
+    flex-flow: column;
+    padding: 0 1em;
+    height: 70vh;
+    justify-content: flex-start;
+
+    h1 {
+        font-size: 5rem;
+        padding: 0;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+
+    button {
+        color: black;
+        background-color: #fdc615;
+        outline: none;
+        border: none;
+        border-radius: 10em;
+        padding: 1em 2.5em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.8rem;
+        letter-spacing: 0.2em;
+        width: fit-content;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 2em 0;
+        animation: buttonanimation 1s linear infinite alternate;
+        cursor: pointer;
+
+        &:active {
+            background-color: #cc9d01;
+        }
+    }
+}
+
+.section1 img {
+    height: 60vh;
+}
+
+// *****Section2******
+.section2 {
+    display: flex;
+    padding: 0;
+
+    .item-2-left {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .item-2-right {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin-left: 10em;
+
+        button {
+            color: black;
+            background-color: #fdc615;
+            outline: none;
+            border: none;
+            border-radius: 10em;
+            padding: 1em 2.5em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.8em;
+            letter-spacing: 0.2em;
+            width: fit-content;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 2em 0;
+            animation: buttonanimation 1s linear infinite alternate;
+            cursor: pointer;
+
+            &:active {
+                background-color: #cc9d01;
+            }
+        }
+    }
+
+    .item-2-right h1 {
+        font-size: 5em;
+        margin: 0.2em 0;
+        padding: 0;
+        line-height: 1em;
+    }
+
+    img {
+        height: 60vh;
+    }
+}
+
+// ******Section3******
+.section3 {
+    display: inline-flex;
+    padding: 0;
+    margin: 4vh 0;
+
+    .item-3-left {
+        width: 15vw;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+
+        h1 {
+            font-family: 'Playfair Display';
+            font-size: 3em;
+            margin: 0.2em 0;
+            padding: 0;
+            line-height: 1.1em;
+            letter-spacing: 0.05em;
+            margin-bottom: 1em;
+        }
+
+        h2 {
+            font-family: 'Playfair Display';
+            font-size: 4em;
+            margin: 0.2em 0;
+            padding: 0;
+            line-height: 1.1em;
+            letter-spacing: 0.05em;
+            margin-bottom: 1em;
+        }
+
+        input {
+            background: none;
+            padding: 1em 2em;
+            outline: none;
+            color: white;
+            font-family: 'Source Sans Pro';
+            font-size: 1.4em;
+            border-radius: 0.5em;
+            width: stretch;
+            border: white 2px solid;
+
+            &::placeholder {
+                color: white;
+                font-family: 'Source Sans Pro';
+                font-size: 1em;
+            }
+        }
+
+        textarea {
+            background: none;
+            padding: 1em 2em;
+            outline: none;
+            color: white;
+            font-family: 'Source Sans Pro';
+            font-size: 1.4em;
+            border-radius: 0.5em;
+            width: stretch;
+            margin: 1.5em 0;
+            height: 15em;
+            border: white 2px solid;
+
+            &::placeholder {
+                color: white;
+                font: {
+                    family: 'Source Sans Pro';
+                    size: 1em;
+                }
+            }
+        }
+
+        button {
+            color: black;
+            background-color: #fdc615;
+            outline: none;
+            border: none;
+            border-radius: 10em;
+            padding: 1em 2.5em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.8em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:active {
+                background-color: #cc9d01;
+            }
+        }
+    }
+
+    .item-3-right {
+        display: flex;
+        flex-flow: column;
+        // justify-content: center;
+        margin-left: 0;
+        animation: buttonanimation 1s linear infinite alternate;
+    }
+
+    img {
+        height: 40vh;
+    }
+}
+
+.nodisplay {
+    display: none;
+}
+
+@keyframes buttonanimation {
+    0% {transform: translateY(-1px);}
+    40% {transform: translateY(-4px);}
+    80% {transform: translateY(-7px);}
+    100% {transform: translateY(-10px);}
+}
+// ********Theme styles*********
